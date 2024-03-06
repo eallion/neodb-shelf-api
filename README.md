@@ -2,14 +2,14 @@
 
 > 默认部署 api/index.py
 
-- `api/index.py` 无分类数据，示例：`https://yourdomain/api?type={type}`
-- `api/page.py` 按页数无分类请求，示例：`https://yourdomain/api?type={type}&page={0-9}`
+- `api/index.py` 分页数据无分类，示例：`https://yourdomain/api?page={0-9}`，也可请求 `category={category}` 参数
+- `api/all.py` 请求所有数据合并，示例：`https://yourdomain/api?type={type}`
 - `api/category.py` 按分类请求，示例：`https://yourdomain/api?type={type}&category={category}`
 - `api/catepage.py` 按页数按分类请求，示例：`https://yourdomain/api?type={type}&category={category}&page={0-9}`
 
 ### 获取自己 NeoDB 上的项目内容
 
-> 自用：https://neodb.eallion.com/api?type=complete
+> 自用：https://neodb.eallion.com/api?page=1
 
 1. 在 [NeoDB API Developer Console](https://neodb.social/developer/) 获取 Access Token；
 2. 在 vercel 上部署该项目，设置环境变量 `AUTHORIZATION` 为第一步获取的 Access Token；
